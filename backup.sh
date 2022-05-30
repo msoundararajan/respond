@@ -1,5 +1,5 @@
 #!/bin/bash
-PATH=$1
+LOGPATH=$1
 BUCKET=$2
 INSTANCE=$3
-aws s3 cp ~/application/storage/logs/ s3://$BUCKET/$INSTANCE/ --exclude "*" --include "*.log" --recursive
+aws s3 cp $LOGPATH s3://$BUCKET/$INSTANCE/ --exclude "*" --include "*.log" --recursive
